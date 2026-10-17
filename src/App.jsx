@@ -1,5 +1,6 @@
 import { Routes, Route, Outlet, Link, useLocation } from "react-router-dom";
 import "./App.css";
+import MarketingLayout from "./components/marketing/MarketingLayout";
 
 /* ==========================================================================
    Shopke routes
@@ -19,7 +20,6 @@ import "./App.css";
    ========================================================================== */
 
 // Temporary stand-ins. Delete each one once the real component is imported.
-const MarketingLayout = () => <Outlet />; // Team B
 const DashboardLayout = () => <Outlet />; // Team D
 
 function Soon({ name }) {
