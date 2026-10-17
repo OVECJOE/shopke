@@ -1,0 +1,26 @@
+.contact__title {
+  margin-bottom: var(--space-6);
+}
+
+/* The shared .split centres its columns, but the form should start at the top */
+.contact__layout {
+  align-items: start;
+}
+
+.contact__message {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact__counter {
+  margin-top: var(--space-1);
+}
+
+.contact__thanks {
+  margin-bottom: var(--space-2);
+}
+
+.contact__reach {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-xl);
+}

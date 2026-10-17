@@ -1,5 +1,6 @@
 import { Routes, Route, Outlet, Link, useLocation } from "react-router-dom";
 import "./App.css";
+import ContactPage from "./pages/contact/ContactPage";
 
 /* ==========================================================================
    Shopke routes
@@ -56,7 +57,7 @@ export default function App() {
         <Route path="/" element={<Soon name="Landing page (Team A)" />} />
         <Route path="/about" element={<Soon name="About (Team B)" />} />
         <Route path="/news" element={<Soon name="News (Team B)" />} />
-        <Route path="/contact" element={<Soon name="Contact (Team B)" />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Route>
 
       {/* Authentication and onboarding use their own full-screen layouts (Team C) */}
