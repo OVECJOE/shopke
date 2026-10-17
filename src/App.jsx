@@ -1,5 +1,6 @@
 import { Routes, Route, Outlet, Link, useLocation } from "react-router-dom";
 import "./App.css";
+import NewsPage from "./pages/news/NewsPage";
 
 /* ==========================================================================
    Shopke routes
@@ -55,7 +56,7 @@ export default function App() {
       <Route element={<MarketingLayout />}>
         <Route path="/" element={<Soon name="Landing page (Team A)" />} />
         <Route path="/about" element={<Soon name="About (Team B)" />} />
-        <Route path="/news" element={<Soon name="News (Team B)" />} />
+        <Route path="/news" element={<NewsPage />} />
         <Route path="/contact" element={<Soon name="Contact (Team B)" />} />
       </Route>
 
