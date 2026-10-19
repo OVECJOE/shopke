@@ -1,5 +1,7 @@
+import StorefrontPage from "./pages/storefront/StorefrontPage.jsx";
 import { Routes, Route, Outlet, Link, useLocation } from "react-router-dom";
 import "./App.css";
+import LandingPage from "./pages/landing/LandingPage.jsx";
 
 /* ==========================================================================
    Shopke routes
@@ -53,11 +55,13 @@ export default function App() {
     <Routes>
       {/* Public marketing pages share a navbar and footer (Team B) */}
       <Route element={<MarketingLayout />}>
-        <Route path="/" element={<Soon name="Landing page (Team A)" />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<Soon name="About (Team B)" />} />
         <Route path="/news" element={<Soon name="News (Team B)" />} />
         <Route path="/contact" element={<Soon name="Contact (Team B)" />} />
       </Route>
+
+      <Route path="/store/:storeSlug" element={<StorefrontPage />} />
 
       {/* Authentication and onboarding use their own full-screen layouts (Team C) */}
       <Route path="/signup" element={<Soon name="Sign up (Team C)" />} />
@@ -69,18 +73,26 @@ export default function App() {
         <Route index element={<Soon name="Overview (Team D)" />} />
         <Route path="orders" element={<Soon name="Orders (Team D)" />} />
         <Route path="products" element={<Soon name="Products (Team E)" />} />
-        <Route path="products/new" element={<Soon name="Add product (Team E)" />} />
+        <Route
+          path="products/new"
+          element={<Soon name="Add product (Team E)" />}
+        />
         <Route
           path="products/:productId/edit"
           element={<Soon name="Edit product (Team E)" />}
         />
-        <Route path="contact-info" element={<Soon name="Contact info (Team E)" />} />
+        <Route
+          path="contact-info"
+          element={<Soon name="Contact info (Team E)" />}
+        />
         <Route path="payments" element={<Soon name="Payments (Team F)" />} />
-        <Route path="customize" element={<Soon name="Customize store (Team F)" />} />
+        <Route
+          path="customize"
+          element={<Soon name="Customize store (Team F)" />}
+        />
       </Route>
 
       {/* Public storefront that shoppers open from a seller's link (Team A) */}
-      <Route path="/store/:storeSlug" element={<Soon name="Storefront (Team A)" />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>
